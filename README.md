@@ -30,17 +30,19 @@ The following tables are created under this database.
 
 ## Project files
 
-`Creating netflix database in PostgreSQL` : Contains code for connecting to database and creating tables and inserting data from csv file.
+`Creating netflix database in PostgreSQL.ipynb` : Contains code for connecting to database and creating tables and inserting data from csv file.
 
-`Snowflake_Queries` : Contains Snowflake SQL queries for creating a data warehouse, database, table for warehouse data and building a snowpipe for auto ingestion of data from s3 bucket.
+`Snowflake_Queries.txt` : Contains Snowflake SQL queries for creating a data warehouse, database, table for warehouse data and building a snowpipe for auto ingestion of data from s3 bucket.
 
-`AWS` : Contains a few commands to store data in S3 bucket, IAM role and policy in json format, Trust relationship, configuring event notifications.
+`AWS.one` : Contains a few commands to store data in S3 bucket, IAM role and policy in json format, Trust relationship, configuring event notifications.
+
+`Steps_to_execute.txt` : Consists of the steps to execute this project
 
 `Data`: Data about netflix shows and movies.
 
 
 ## How to run
-Please follow the steps mentioned in Steps_to_execute
+Please follow the steps mentioned in **Steps_to_execute**
 
 ## Errors and issues occured
 
@@ -50,9 +52,8 @@ When I created my file format added an extra line in it  `error_on_column_count_
 
 
 2. The data uploaded in my first try was partially uploaded. From over 77k rows in my csv file, only around 12k rows were uploaded. I troubleshooted and figured out that the rows that didn't load into snowflake were the rows that had more comms. Like multiple genres, or multiple productions houses. Snowflake wasn't able to differentiate the commas that should be considered as delimiter and commas that are part of the value. 
-
-<ins>**What I did to resolve it **</ins>
-To fix this, I replaced all commas, that didn't act as delimiters, with backslashes and the data was uploaded successfully without any issues.
+  <ins>**What I did to resolve it **</ins>
+  To fix this, I replaced all commas, that didn't act as delimiters, with backslashes and the data was uploaded successfully without any issues.
 
 
 
