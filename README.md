@@ -44,8 +44,11 @@ The following tables are created under this database.
 1. The warehouse data created by our POSTGRESQL query created a `.csv` file that for some reason had an extra column(cross checked and the file had no extra column). The extra column was probably created or interpreted by snowflake because our file had data that had commas in it. Like genres, production house, Movie name
 <ins>**What I did to resolve it **</ins>
 When I created my file format added an extra line in it  `error_on_column_count_mismatch=False` this would ignore the column mismatch. After loading the data I verified and all the columns were uploaded without any data loss
+
+
 2. The data uploaded in my first try was partially uploaded. From over 77k rows in my csv file, only around 12k rows were uploaded. I troubleshooted and figured out that the rows that didn't load into snowflake were the rows that had more comms. Like multiple genres, or multiple productions houses. Snowflake wasn't able to differentiate the commas that should be considered as delimiter and commas that are part of the value. 
-<ins>**What I did to resolve it ?**</ins>
+
+<ins>**What I did to resolve it **</ins>
 To fix this, I replaced all commas, that didn't act as delimiters, with backslashes and the data was uploaded successfully without any issues.
 
 
