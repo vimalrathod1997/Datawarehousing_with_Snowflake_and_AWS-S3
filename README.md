@@ -31,8 +31,11 @@ The following tables are created under this database.
 ## Project files
 
 `Creating netflix database in PostgreSQL` : Contains code for connecting to database and creating tables and inserting data from csv file.
+
 `Snowflake_Queries` : Contains Snowflake SQL queries for creating a data warehouse, database, table for warehouse data and building a snowpipe for auto ingestion of data from s3 bucket.
+
 `AWS` : Contains a few commands to store data in S3 bucket, IAM role and policy in json format, Trust relationship, configuring event notifications.
+
 `Data`: Data about netflix shows and movies.
 
 
