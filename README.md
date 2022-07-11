@@ -39,6 +39,9 @@ The following tables are created under this database.
 `Data`: Data about netflix shows and movies.
 
 
+## How to run
+Please follow the steps mentioned in Steps_to_execute
+
 ## Errors and issues occured
 
 1. The warehouse data created by our POSTGRESQL query created a `.csv` file that for some reason had an extra column(cross checked and the file had no extra column). The extra column was probably created or interpreted by snowflake because our file had data that had commas in it. Like genres, production house, Movie name
